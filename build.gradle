@@ -8,27 +8,33 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
     }
 }
+
+// 关键：同时把 ForgeMaven 设为插件仓库
+plugins {
+    id 'eclipse'
+    id 'idea'
+}
 apply plugin: 'forge'
 
-version = "1.3.0"
-group = "com.fiskmods.lightsabers"
-archivesBaseName = "AdvancedLightsabers"
+group = 'com.fiskmods.lightsabers'
+version = '1.3.0'
+archivesBaseName = 'AdvancedLightsabers'
 
 sourceCompatibility = targetCompatibility = '1.8'
 
 minecraft {
-    version = "1.12.2-14.23.5.2854"
-    runDir = "run"
-    mappings = "stable_39"
+    version = '1.12.2-14.23.5.2854'
+    runDir = 'run'
+    mappings = 'stable_39'
 }
 
 dependencies {
-    // 1.12.2 用户 dev 依赖
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2854'
 }
 
 processResources {
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
+    inputs.property 'version', project.version
+    inputs.property 'mcversion', project.minecraft.version
 
     from(sourceSets.main.resources.srcDirs) {
         include 'mcmod.info'
