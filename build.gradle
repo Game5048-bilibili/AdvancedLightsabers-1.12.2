@@ -8,12 +8,6 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
     }
 }
-
-// 关键：同时把 ForgeMaven 设为插件仓库
-plugins {
-    id 'eclipse'
-    id 'idea'
-}
 apply plugin: 'forge'
 
 group = 'com.fiskmods.lightsabers'
