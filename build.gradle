@@ -8,7 +8,7 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
     }
 }
-apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'forge'
 
 version = "1.3.0"
 group = "com.fiskmods.lightsabers"
